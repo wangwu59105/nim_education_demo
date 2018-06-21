@@ -101,6 +101,6 @@ dependencies {
     implementation 'com.netease.nimlib:chatroom:5.2.0'
 
 
-    //视频处理 libvideoeffect.so video_effect.jar
+    //视频处理 libvideoeffect.so video_effect.jar 包含了
 
 }
