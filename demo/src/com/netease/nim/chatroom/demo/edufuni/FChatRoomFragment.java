@@ -130,6 +130,7 @@ public class FChatRoomFragment extends TFragment implements ViewPager.OnPageChan
     private ImageView fullScreenImage; // 显示全屏按钮
     private ImageView cancelFullScreenImage; //取消全屏显示按钮
 
+    private LinearLayout  masterVideoView;
     /**
      * ********************************** 生命周期 **********************************
      */
@@ -297,7 +298,11 @@ public class FChatRoomFragment extends TFragment implements ViewPager.OnPageChan
         backLayout = findView(R.id.back_layout);
         fullScreenView = findView(R.id.full_screen_view);
         fullScreenLayout = findView(R.id.full_screen_layout);
-
+        masterVideoView = findView(R.id.master_video_view);
+        // TODO: 2018/6/22 ww_ 进来的时候是竖屏  这个时候反着用
+        ViewGroup.LayoutParams params = masterVideoView.getLayoutParams();
+        params.height = ScreenUtil.screenHeight/5;
+        masterVideoView.setLayoutParams(params);
         videoLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
