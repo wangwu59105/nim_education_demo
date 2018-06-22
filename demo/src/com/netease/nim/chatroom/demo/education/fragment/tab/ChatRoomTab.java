@@ -8,9 +8,7 @@ import com.netease.nim.chatroom.demo.im.ui.tab.reminder.ReminderId;
  * Created by hzxuwen on 2015/12/14.
  */
 public enum ChatRoomTab {
-    RTS(0, ReminderId.RTS, RTSTabFragment.class, R.string.chat_room_rts, R.layout.chat_room_rts_tab),
-    CHAT_ROOM_MESSAGE(1, ReminderId.SESSION, MessageTabFragment.class, R.string.chat_room_message, R.layout.chat_room_message_tab),
-    ONLINE_PEOPLE(2, ReminderId.CONTACT, OnlinePeopleTabFragment.class, R.string.chat_room_online_people, R.layout.chat_room_people_tab);
+    RTS(0, ReminderId.RTS, RTSTabFragment.class, R.string.chat_room_rts, R.layout.chat_room_rts_tab);
 
     public final int tabIndex;
 

@@ -14,9 +14,9 @@ import com.netease.nim.chatroom.demo.base.ui.TAdapter;
 import com.netease.nim.chatroom.demo.base.ui.TAdapterDelegate;
 import com.netease.nim.chatroom.demo.base.ui.TFragment;
 import com.netease.nim.chatroom.demo.base.ui.TViewHolder;
+import com.netease.nim.chatroom.demo.edufuni.FChatRoomActivity;
 import com.netease.nim.chatroom.demo.im.ui.ptr.PullToRefreshBase;
 import com.netease.nim.chatroom.demo.im.ui.ptr.PullToRefreshListView;
-import com.netease.nim.chatroom.demo.education.activity.ChatRoomActivity;
 import com.netease.nim.chatroom.demo.education.adapter.OnlinePeopleAdapter;
 import com.netease.nim.chatroom.demo.education.helper.ChatRoomMemberCache;
 import com.netease.nim.chatroom.demo.education.helper.SimpleCallback;
@@ -78,7 +78,7 @@ public class OnlinePeopleFragment extends TFragment implements TAdapterDelegate,
 
     public void onCurrent() {
         clearCache();
-        roomId = ((ChatRoomActivity) getActivity()).getRoomInfo().getRoomId();
+        roomId = ((FChatRoomActivity) getActivity()).getRoomInfo().getRoomId();
         fetchData();
         videoListener.onTabChange(false);
     }
@@ -194,7 +194,7 @@ public class OnlinePeopleFragment extends TFragment implements TAdapterDelegate,
             if (memberCache.containsKey(member.getAccount())) {
                 items.remove(memberCache.get(member.getAccount()));
             }
-            OnlinePeopleItem item = new OnlinePeopleItem(((ChatRoomActivity)getActivity()).getRoomInfo().getCreator(),
+            OnlinePeopleItem item = new OnlinePeopleItem(((FChatRoomActivity)getActivity()).getRoomInfo().getCreator(),
                     member);
 
             memberCache.put(member.getAccount(), item);

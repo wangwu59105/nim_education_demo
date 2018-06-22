@@ -3,26 +3,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include layout="@layout/rts_control_layout" />
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/control_layout"
         android:background="@color/color_message_default_bg">
 
         <com.netease.nim.chatroom.demo.education.doodle.DoodleView
             android:id="@+id/doodle_view"
-            android:layout_width="320dp"
-            android:layout_height="240dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_gravity="center" />
 
         <TextView
             android:id="@+id/file_loading_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/color_red_d1021c"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:textColor="@color/color_red_d1021c" />
 
         <TextView
             android:id="@+id/close_file_btn"
@@ -36,17 +34,19 @@
             android:text="@string/close"
             android:textColor="@color/white"
             android:textSize="11sp"
-            android:visibility="gone"/>
+            android:visibility="gone" />
     </FrameLayout>
 
     <LinearLayout
         android:id="@+id/palette_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/palette_layout_tool"
         android:gravity="bottom"
         android:orientation="vertical"
         android:paddingBottom="56dp"
-        android:paddingLeft="20dp"
+        android:paddingLeft="30dp"
         android:visibility="gone">
 
         <ImageView
@@ -90,4 +90,8 @@
             android:layout_marginTop="7dp"
             android:background="@drawable/purple_circle_shape" />
     </LinearLayout>
+
+    <include
+        android:id="@+id/palette_layout_tool"
+        layout="@layout/rts_control_layout" />
 </RelativeLayout>

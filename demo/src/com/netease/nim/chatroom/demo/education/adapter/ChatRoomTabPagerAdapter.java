@@ -31,11 +31,19 @@ public class ChatRoomTabPagerAdapter extends SlidingTabPagerAdapter {
                 List<Fragment> fs = fm.getFragments();
                 if (fs != null) {
                     for (Fragment f : fs) {
+                        if(null==ChatRoomTab.fromTabIndex(i)){
+                            break;
+                        }
                         if (f.getClass() == ChatRoomTab.fromTabIndex(i).clazz) {
                             fragment = (ChatRoomTabFragment) f;
                             break;
                         }
                     }
+                }
+
+
+                if(null==ChatRoomTab.fromTabIndex(i)){
+                   return;
                 }
 
                 if (fragment == null) {

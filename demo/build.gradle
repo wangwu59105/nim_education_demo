@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-
 def getGitVersion() {
     try {
         return 'git rev-parse --short HEAD'.execute().text.trim()
@@ -102,5 +101,9 @@ dependencies {
 
 
     //视频处理 libvideoeffect.so video_effect.jar 包含了
+
+    implementation 'com.alibaba:fastjson:1.1.68.android'
+
+
 
 }

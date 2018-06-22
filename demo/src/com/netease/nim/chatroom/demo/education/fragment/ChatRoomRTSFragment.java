@@ -373,7 +373,7 @@ public class ChatRoomRTSFragment extends TFragment implements View.OnClickListen
                 Log.i("Doodle", "doodleView marginLeft =" + marginLeft);
 
                 float offsetX = marginLeft;
-                float offsetY = statusBarHeight + marginTop + ScreenUtil.dip2px(220) + ScreenUtil.dip2px(40);
+                float offsetY = statusBarHeight + marginTop ;//+ ScreenUtil.dip2px(220) + ScreenUtil.dip2px(40);
 
                 doodleView.setPaintOffset(offsetX, offsetY);
                 Log.i("Doodle", "client1 offsetX = " + offsetX + ", offsetY = " + offsetY);

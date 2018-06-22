@@ -16,6 +16,7 @@ import com.netease.nim.chatroom.demo.DemoCache;
 import com.netease.nim.chatroom.demo.R;
 import com.netease.nim.chatroom.demo.base.ui.TActivity;
 import com.netease.nim.chatroom.demo.base.util.NetworkUtil;
+import com.netease.nim.chatroom.demo.edufuni.FChatRoomActivity;
 import com.netease.nim.chatroom.demo.im.business.LogoutHelper;
 import com.netease.nim.chatroom.demo.im.ui.dialog.DialogMaker;
 import com.netease.nim.chatroom.demo.education.module.ChatRoomHttpClient;
@@ -147,7 +148,7 @@ public class EnterRoomActivity extends TActivity {
             @Override
             public void onSuccess(AVChatChannelInfo avChatChannelInfo) {
                 DialogMaker.dismissProgressDialog();
-                ChatRoomActivity.start(EnterRoomActivity.this, roomId, true);
+                FChatRoomActivity.start(EnterRoomActivity.this, roomId, true);
                 finish();
             }
 
@@ -166,7 +167,7 @@ public class EnterRoomActivity extends TActivity {
 
     // 进入房间
     private void enterRoom() {
-        ChatRoomActivity.start(EnterRoomActivity.this, roomEdit.getText().toString(), false);
+        FChatRoomActivity.start(EnterRoomActivity.this, roomEdit.getText().toString(), false);
         finish();
     }
 

@@ -103,15 +103,18 @@
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
+
+
         <activity
-            android:name=".education.activity.ChatRoomActivity"
-            android:screenOrientation="portrait"
+            android:name="com.netease.nim.chatroom.demo.edufuni.FChatRoomActivity"
+            android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
+
         <activity
             android:name=".education.activity.InputActivity"
-            android:screenOrientation="portrait"
+            android:screenOrientation="landscape"
             android:theme="@style/InputActivityTheme"
             android:windowSoftInputMode="stateAlwaysVisible|adjustResize" />
 
