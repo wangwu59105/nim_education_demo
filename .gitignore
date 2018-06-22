@@ -1,0 +1,6 @@
+# Created by .ignore support plugin (hsz.mobi)
+/.idea/
+/nim-chatroom.iml
+/local.properties
+/nim_education_demo.iml
+.gradle/
